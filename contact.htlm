@@ -51,7 +51,6 @@
               <p><a href="index.html" class="btn btn-primary">Retour à l'Acceuil</a></p>
             </div>
            </div>
-
     <script src=boot/js/bootstrap.bundle.min.js></script> 
 </body>
 </html>
