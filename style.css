@@ -51,6 +51,15 @@ form{
     background-color: aqua;
 
 }
-.cours {
-     padding: 10px, 20px, 30 px, 40 px;
+body{
+    padding: 30 px;
+    margin: 20px;
 }
+ .cours fieldset {
+    width: px;
+    margin: auto;
+    padding: 8 px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
