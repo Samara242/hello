@@ -1,0 +1,45 @@
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    margin:0;
+    font-family: 'Times New Roman', Times, serif ;
+     font-size: 20px;
+       line-height: 1.6;
+}
+
+body{
+    margin: 0;
+    color: white;
+    position: relative;
+}
+.bloc{
+    background-color: rgba(255, 255,255, 0, 1);
+}
+.cours{
+    text-align: justify;
+}
+.cours p{
+       color: blue;
+       font-size: 18px;
+       line-height: 1.6;
+}
+.cours h1{
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(13, 110, 253, 0.2);
+}
+.btn{
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.info{
+      background-color: rgb(13, 110, 253, 0.2);
+       font-size: 20px;
+       line-height: 1.6;
+}
+form{
+    width: 250 px;
+    margin: auto;
+   }
