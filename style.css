@@ -2,7 +2,6 @@ img{
     max-width: 100%;
     height: auto;
 }
-
 body{
     margin:0;
     font-family: 'Times New Roman', Times, serif ;
@@ -19,10 +18,8 @@ body{
     background-color: rgba(255, 255,255, 0, 1);
 }
 .cours{
-    pading: 20 px;
     text-align: justify;
 }
-
 .cours p{
        color: blue;
        font-size: 18px;
@@ -46,3 +43,14 @@ form{
     width: 250 px;
     margin: auto;
    }
+
+.accueil h2, p{
+    color:black;
+}
+.accueil h2, h3{
+    background-color: aqua;
+
+}
+.cours {
+     padding: 10px, 20px, 30 px, 40 px;
+}
