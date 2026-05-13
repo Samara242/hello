@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>introduction au CSS</title>
+    <link href="boot/css/bootsstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(A2.jpg);" class="cours">
+  <div class="container mt-5">
+        <section>
+          <article>
+            <div class="row">
+              <div col-12 cold-md-6>
+                <h1 id="titre"><fieldset> Introduction au CSS</fieldset> </h1>
+                 <p>CSS est le langage qui nous permet de mettre en forme nos pages web.Dans ce module nous verrons ensemble comment utiliser le CSS dans nos pages. </p><br>
+                  <h3>Par quoi commencer ?<br></h3>
+                    <p>il faut savoir qu'il existe trois manières différrentes d'utiliser CSS: dans le head, le body en l'inserant directement dans les balises html.<br>Mais, ces pratiques peuvent être genantes lorsqu'on a un site qui contient plusieurs pages web;
+                    alors nous utiliserons un fichier .css externe qui reste la meilleur façon d'utiliser CSS? <br></p>
+               <p>Nos pages web sont structurés grâce au langage HTML, pour les rendre plus beau à l'oeil nous utilisons des propriétés du CSS. </p><br>
+              </div>
+            </div>
+           </article>
+        </section>
+
+
+       <div class="container mt-4">
+        <div class="row">
+          <div col-12 cold-md-6>
+              <h3> le formatage du texte: formater le texte consiste à modifier son apparence. </h3>
+                 <div class="bg-dark text-light p-3 rounded">
+                    <p>Voici le code html que nous allons utiliser pour ce cours,faites comme nous</p>
+                     <fieldset> 
+                      <button class="btn btn-primary mb-2" onclick="copiercode('code1')">copier</button>
+                           <pre id="code1"><code> 
+                               &lt;!DOCTYPE html&gt;
+                               &lt;html lang="fr"&gt;
+                               &lt;head&gt;
+                               &lt;meta charset="UTF-8"&gt;
+                               &lt;meta name="viewport" content="width=device-width, initial-scale=1.0&gt;
+                               &lt;title&gt;Mon premier CS&lt;title&gt;
+                               &lt;link rel="stylesheet" href="style.css"&gt;
+                               &lt;head&gt;
+                               &lt;body&gt;
+                                    &lt;h1&gt;Mon Site&lt;h1&gt; 
+                                    &lt;p id="titre" &gt;bonjour à tous, j'apprends le css.&lt;p&gt;
+                               &lt;body&gt;
+                               &lt;html&gt;
+                            </code></pre>
+                      </fieldset>
+                   </div>
+            </div>
+          </div>
+
+          
+             <p>
+                <ol>
+                 <div class="row">
+                   <div col-12 cold-md-6>
+                    <li>La Taille : on utilise la propriété <strong>font-size: sa valeur en px ou % </strong></li><br>
+                      <div class="bg-dark text-light p-3 rounded">
+                        <fieldset>
+                             <button class="btn btn-primary mb-2" onclick="copiercode('code2')">copier</button>
+                          <pre id="code2"><code>
+                             p {
+                               font-size: 20px;
+                              }
+                          </code></pre>
+                         </fieldset>
+                        <figure><img src="exemples/n1.png" alt="texte à 20px" class="img-fluid"/><figcaption>Taille à 20 px</figcaption></figure><br>
+                      </div>
+                   </div>
+                 </div>
+
+                    
+                  <div class="row">
+                   <div col-12 cold-md-6>
+                     <li>la police: on utilise la propriété <strong>font-familly, on met le nom de la police que l'on souhaite, de préfférence en mettre trois ou quatre le navigateur affichera la police qu'on a dans nos fichiers.</strong></li><br>
+                       <div class="bg-dark text-light p-3 rounded">
+                           <fieldset>
+                             <button class="btn btn-primary mb-2" onclick="copiercode('code3')">copier</button>
+                              <pre id="code3" ><code>
+                                 h1 {
+                                     font-familly: Times NewsRoman, Times, serif;/*mettre trois police de préférence pour permettre au navigateur de sélecttionner celle dont le fichier est présent dans notre machine*/
+                                    }
+                               </code></pre>
+                           </fieldset>
+                       </div><br>
+                   </div>
+                  </div>
+
+                  
+                  <div class="row">
+                   <div col-12 cold-md-6>
+                     <li>Italique, Gras, Souligné</li><br>
+                        <div class="bg-dark text-light p-3 rounded">
+                            <fieldset>
+                               <button class="btn btn-primary mb-2" onclick="copiercode('code4')">copier</button>
+                                 <pre id="code4"><code>
+                                  body { 
+                                        font-style: italic;
+                                       }
+                                 </code></pre>
+                            </fieldset><br>
+                          <figure><img src="exemples/n2.png" alt="texte en italic" class="img-fluid"><figcaption> titre en italic</figcaption></img></figure><br>
+                       </div>
+                   </div>
+                  </div>
+
+
+                     <div class="row">
+                      <div col-12 cold-md-6>
+                       <div class="bg-dark text-light p-3 rounded">
+                             <fieldset>
+                                 <button class="btn btn-primary mb-2" onclick="copiercode('code5')">copier</button>
+                                 <pre id="code5"><code>
+                                      p { 
+                                          font-weight: bold;/*en gras*/
+                                        }
+                                  </code></pre>
+
+                       
+                                  <button class="btn btn-primary mb-2" onclick="copiercode('code6')">copier</button>
+                                  <pre id="code6"><code>
+                                      h1 { 
+                                           text-decoration: underline;/*souligné*/
+                                         }
+                                  </code></pre>
+                   
+                        
+                                  <button class="btn btn-primary mb-2" onclick="copiercode('code7')">copier</button>
+                                  <pre id="code7" ><code>
+                                        p { 
+                                            text-decoration: Line-through;/*barré*/
+                                         }
+                                  </code></pre>
+
+                        
+                                    <button class="btn btn-primary mb-2" onclick="copiercode('code8')">copier</button>
+                                    <pre id="code8"><code>
+                                        p { 
+                                           text-decoration: overline;/*souligné le haut*/
+                                        }
+                                    </code></pre>
+                             </fieldset>
+                          <figure><img src="exemples/n60.png" alt="soulignement" class="img-fluid"><figcaption>titre souligné</figcaption></img></figure><br>
+                       </div>
+                      </div>
+                     </div>
+            
+
+                     <div class="row">
+                   <div col-12 cold-md-6>
+                    <li>Alignement du texte</li><br>
+                       <div class="bg-dark text-light p-3 rounded">
+                            <fieldset>
+                                    <button class="btn btn-primary mb-2" onclick="copiercode('code9')">copier</button>
+                                     <pre id="code9"><code>
+                                       h1 { 
+                                            text-align: center;
+                                         }
+                                   </code></pre>
+
+                                     <button class="btn btn-primary mb-2" onclick="copiercode('code10')">copier</button>
+                                    <pre id="code10"><code>
+                                        body { 
+                                        text-align: right;
+                                        }
+                                    </code></pre>
+
+                                    <button class="btn btn-primary mb-2" onclick="copiercode('code11')">copier</button>
+                                    <pre id="code11"><code>
+                                        h1 { 
+                                        text-align: left;
+                                        }
+                                    </code></pre>
+
+                                      <button class="btn btn-primary mb-2" onclick="copiercode('code12')">copier</button>
+                                    <pre id="code12"><code>
+                                        h1 { 
+                                        text-align: justify;
+                                        }
+                                    </code></pre>
+                           </fieldset><br>
+                         <figure><img src="exemples/n70.png" alt="ecrit à droite" class="img-fluid"><figcaption>texte à droite</figcaption></img></figure><br>
+                      </div>
+                     </div>
+                    </div>
+
+
+                  <div class="row">
+                   <div col-12 cold-md-6>
+                    <li>La couleur : on utilise la propriété <strong>color, pour le texte uniquement et
+                     background-color, pour le fond et aussi background-image, pour un fond en image</strong></li><br>
+                        <div class="bg-dark text-light p-3 rounded">
+                           <fieldset>
+                                 <button class="btn btn-primary mb-2" onclick="copiercode('code13')">copier</button>
+                                    <pre id="code13"><code>
+                                            p { 
+                                            color:purple;
+                                            }
+                                            h1{
+                                                color: #FFC305;/*la couleur peut s'écrire en hexadécimal*/
+                                            }
+                                            p {
+                                                background: blue;
+                                            }
+                                            body{
+                                                background-image: url("exemples/n30.png");
+                                                background-repeat: no-repeat;/*évite que l'image se répète plusieurs fois*/
+                                            }
+                                        </code></pre>
+                           </fieldset><br>
+                          <figure><img src="exemples/n30.png" alt="image en fond" class="img-fluid" ><figcaption>image utilisé comme fond</figcaption></img></figure>
+                          <figure><img src="exemples/n40.png" alt="fond en couleur" class="img-fluid"><figcaption> fond de texte en couleur</figcaption></img></figure>
+                          <figure><img src="exemples/n50.png" alt="texte en couleur" class="img-fluid"><figcaption>titre en couleur</figcaption></img></figure>
+                        </div> 
+                        <p><a href="index.html" claass="btn btn-primary">Retour à l'Acceuil</a></p>
+                        <div class="text-center mt-5"><a href="exemples/exemples.html" class=" btn btn-success btn-lg">Téléchager cet exemple</a></div>
+                   </div>
+                  </div>
+                </ol>
+              </p>
+            </div>
+        </div>
+    </div>
+    <script src=boot/js/bootstrap.bundle.min.js></script>
+    <script>
+     function copiercode(id){
+     let texte = document.getElementById(id).innerText;
+     navigator.clipboard.writeText(texte);
+     alert("code copié");
+     }
+    </script>
+
+</body>
+</html>
