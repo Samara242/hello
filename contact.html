@@ -7,51 +7,61 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body style="background-image: url(D.jpg);" class="info">
-   
-    <fieldset class="border p-4 rounded">
-       <div class="row">
-           <div class="col-12 cold-md-6">
-               <legend class="w-auto px-2" ><span class="fw-bold bg-primary text-white p-1">Pour toutes vos préoccupations et suggestions CONTACTEZ-Nous !</span> 
-               </legend><br>
-            </div>
-           </div>
-
-      <form method="post" attribut="" class="container col-12 cold-md-5 mx-auto">
-        <div class="row">
-           <div class="col-12 cold-md-4">
-              <label for="Nom">Nom:</label> <input type="text" class="form-control" name="Nom" id="Nom"></br><br> 
-            </div>
-
-           <div class="col-12 cold-md-4"></div>
-             <label for="Prénom">Prénom:</label> <input type="text" class="form-control" name="prénom" id="prenom"></br><br>
-            </div>
+<body style="background-image: url(D.jpg); background-repeat: no-repeat;" class="info">
+<div class="container mt-4">
+    <div class="row g-3 align-items-center ">
+        <div class="col-auto ">
           
-             <div class="col-12 cold-md-4"> 
-               <label for="Commentaire">Commentaire:</label><input  type="textarea" class="form-control" name="Commentaire" id="Commentaire"><br><br>
-              </div>
+          <h3 id="joue"> 
+              <em style="text-decoration: underline;">A PROPOS</em>: Nous sommes le groupe <span class=text-decoration>Elites CODEURS</span>, 
+               notre objectif est de vous amener à bien utiliser le css dans vos pages web, nous sommes près à vous aider à devenir des experts du WEB.
+          </h3>
+        </div>
+     </div>
 
-              <div class="col-12 cold-md-4">
-               <label for="Email">Votre Email:</label> <input type="email" class="form-control" name="Email" id="Email"></br><br>
-              </div>
 
-              <div class="col-12 cold-md-4"><label for="Tél">Tél:</label> <input type="tel" class="form-control"
-                name="Tél" id="Tél"></br>
-              </div>
-         </div>
-          <button ty="submit" class="btn btn-primary">Envoyer</button>
-       </form>
-     </fieldset>
+        <div  class="row  g-3 align-items-center">
+         <div class="col-auto">
+               <legend class="w-auto px-2"><span class="fw-bold bg-primary text-white p-1">Toutes vos préoccupations et
+                 suggestions sont les bienvenues.</span> 
+               </legend><br><br>
+          </div>
+       </div>
 
-     <div class="row">
-            <div class="col-12 cold-md-6">
-              <h3> 
-              A PROPOS: Nous sommes le groupe <span class=text-decoration>Elites CODEURS</span>  près à vous aider à devenir des experts du WEB.
-            </h3>
-              <p><a href="index.html" class="btn btn-primary">Retour à l'Acceuil</a></p>
-            </div>
+
+
+       <div class="row g-3 align-items-center">
+          <div class="col-auto ">
+            
+              <form method="post" >
+                <label for="Nom">Nom:</label> <input type="text" class="form-control"
+                 name="Nom" id="Nom"></br><br> 
+          
+                <label for="Prénom">Prénom:</label> <input type="text" class="form-control" 
+                 name="prénom" id="prenom"></br><br>
+            
+                <label for="Email">Votre Email:</label> <input type="email" class="form-control" 
+                name="Email" id="Email"></br><br>
+
+                <label for="Tél">Tél:</label> <input type="tel" class="form-control"
+                 name="Tél" id="Tél"><br><br><br>
+               
+                <label for="Commentaire">Commentaire:</label><input  type="textarea" style="height: 100px;width: 300px; ;"
+                 class="form-control"
+                 name="Commentaire" id="Commentaire"><br><br>
+               </form>
+              
+             </div>
            </div>
-      
+        
+        
+       <div class="row g-3 align-items-center">
+          <div class="col-auto ">
+             <button type="submit" class="btn btn-sm btn-primary" style="margin-left: 20px;">Envoyer</button><br><br>
+             <p><a href="index.html" class="btn btn-sm btn-primary">Retour à l'Acceuil</a></p><br>
+          </div>
+       </div>
+</div>
     <script src=boot/js/bootstrap.bundle.min.js></script> 
 </body>
 </html>
