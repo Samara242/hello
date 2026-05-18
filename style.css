@@ -1,65 +1,63 @@
-img{
+header{
+       width: 400 px;
+       max-width: 450 px;
+       margin:auto;
+       margin-top: 30 px;
+}
+footer{
+     padding-left:20px ;
+}
+p{
+    color:black ;
+    font-size: 20px;
+    text-align: justify;
+    margin-left: 20px;
+}
+body{
+    font-family: Times New Roman, Times, serif;
+}
+#joue{
+    color: rgb(39, 18, 48);
+    background-color: aliceblue;
+}
+button{
+    
+    max-width: 100%;
+    max-height: 50px;
+}
+input text,tel, email{
+    width: 50px;
     max-width: 100%;
     height: auto;
 }
-body{
-    margin:0;
-    font-family: 'Times New Roman', Times, serif ;
-     font-size: 20px;
-       line-height: 1.6;
+input textarea{
+    max-width: auto;
+    height: 300 px;
+    max-height: 300%;
+    width: 500px;
 }
-
-body{
-    margin: 0;
-    color: white;
-    position: relative;
-}
-.bloc{
-    background-color: rgba(255, 255,255, 0, 1);
+form{
+    color: blueviolet;
+   
 }
 .cours{
     text-align: justify;
 }
-.cours p{
-       color: blue;
-       font-size: 18px;
-       line-height: 1.6;
-}
-.cours h1{
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(13, 110, 253, 0.2);
-}
-.btn{
-    font-size: 14px;
-    padding: 5px 10px;
-}
-.info{
-      background-color: rgb(13, 110, 253, 0.2);
-       font-size: 20px;
-       line-height: 1.6;
-}
-form{
-    width: 250 px;
-    margin: auto;
-   }
-
-.accueil h2, p{
-    color:black;
-}
-.accueil h2, h3{
-    background-color: aqua;
-
-}
-body{
-    padding: 30 px;
+fieldset{
+    width: 160px;
+    max-width: 200%;
+    height: auto;
+    padding: 20px;
+    background-color: #2b0457;
     margin: 20px;
 }
- .cours fieldset {
-    width: px;
-    margin: auto;
-    padding: 8 px;
-    font-size: 14px;
-    border-radius: 8px;
-}
 
+img{
+    width: 650px;
+    max-width: 700%;
+    height: auto;
+    padding: 20px;
+}
+code{
+    color: aliceblue;
+}
