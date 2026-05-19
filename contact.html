@@ -1,67 +1,151 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="boot/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Élites Codeurs</title>
+  <link href="boot/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #0d1117; }
+    .page-header { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .page-label { background: rgba(147,197,253,0.12); border-color: rgba(147,197,253,0.25); color: #93c5fd; }
+    .page-header h1 { color: #ffffff; }
+    .page-header p { color: rgba(255,255,255,0.65); }
+  </style>
 </head>
-<body style="background-image: url(D.jpg); background-repeat: no-repeat;" class="info">
-<div class="container mt-4">
-    <div class="row g-3 align-items-center ">
-        <div class="col-auto ">
-          
-          <h3 id="joue"> 
-              <em style="text-decoration: underline;">A PROPOS</em>: Nous sommes le groupe <span class=text-decoration>Elites CODEURS</span>, 
-               notre objectif est de vous amener à bien utiliser le css dans vos pages web, nous sommes près à vous aider à devenir des experts du WEB.
-          </h3>
+<body>
+
+  <!-- FOND D'ÉCRAN -->
+  <div class="contact-bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" style="background:rgba(13,17,23,0.92); border-bottom:1px solid rgba(255,255,255,0.08);">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" style="color:#fff;">
+        <span class="logo-tag">&lt;/&gt;</span> Élites Codeurs
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" style="color:rgba(255,255,255,0.6);">Accueil</a></li>
+        <li><a href="css.html" style="color:rgba(255,255,255,0.6);">Documentation</a></li>
+        <li><a href="contact.html" style="background:rgba(255,255,255,0.08); color:#fff;">Contact</a></li>
+      </ul>
+      <button class="burger" onclick="toggleMenu()" style="border-color:rgba(255,255,255,0.2); color:#fff;">&#9776;</button>
+    </div>
+    <ul class="nav-mobile" id="mobileMenu" style="background:#0d1117; border-top:1px solid rgba(255,255,255,0.08);">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="css.html">Documentation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- EN-TETE -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-label">Groupe Élites Codeurs</div>
+      <h1>Nous Contacter</h1>
+      <p>Toutes vos questions, suggestions et retours sont les bienvenus. Notre équipe vous répond dans les meilleurs délais.</p>
+    </div>
+  </div>
+
+  <!-- SECTION CONTACT -->
+  <section class="contact-section">
+    <div class="contact-grid">
+
+      <!-- A PROPOS -->
+      <div class="contact-about">
+        <h2>À propos de nous</h2>
+        <p>Nous sommes le groupe <strong style="color:#fff;">Élites Codeurs</strong>. Notre objectif est de vous accompagner dans l'apprentissage du CSS et du développement web, pour que vous deveniez des experts du Web.</p>
+
+        <div class="contact-info-cards" style="margin-top:1.5rem;">
+          <a href="mailto:ElitesCodeurs@gmail.com" class="info-card">
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value">ElitesCodeurs@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:0699473334" class="info-card">
+            <div>
+              <div class="info-label">Téléphone</div>
+              <div class="info-value">06 994 73 34</div>
+            </div>
+          </a>
+          <div class="info-card">
+            <div>
+              <div class="info-label">Disponibilité</div>
+              <div class="info-value">Lundi – Vendredi, 9h – 18h</div>
+            </div>
+          </div>
         </div>
-     </div>
 
+        <div style="margin-top:2rem;">
+          <a href="index.html" class="btn-ghost" style="color:rgba(255,255,255,0.8); border-color:rgba(255,255,255,0.2);">Retour à l'accueil</a>
+        </div>
+      </div>
 
-        <div  class="row  g-3 align-items-center">
-         <div class="col-auto">
-               <legend class="w-auto px-2"><span class="fw-bold bg-primary text-white p-1">Toutes vos préoccupations et
-                 suggestions sont les bienvenues.</span> 
-               </legend><br><br>
+      <!-- FORMULAIRE -->
+      <div class="contact-form-wrap">
+        <h2>Envoyer un message</h2>
+        <form class="contact-form" onsubmit="envoyerForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="Nom">Nom</label>
+              <input type="text" id="Nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+              <label for="Prenom">Prénom</label>
+              <input type="text" id="Prenom" name="prenom" placeholder="Votre prénom" required>
+            </div>
           </div>
-       </div>
-
-
-
-       <div class="row g-3 align-items-center">
-          <div class="col-auto ">
-            
-              <form method="post" >
-                <label for="Nom">Nom:</label> <input type="text" class="form-control"
-                 name="Nom" id="Nom"></br><br> 
-          
-                <label for="Prénom">Prénom:</label> <input type="text" class="form-control" 
-                 name="prénom" id="prenom"></br><br>
-            
-                <label for="Email">Votre Email:</label> <input type="email" class="form-control" 
-                name="Email" id="Email"></br><br>
-
-                <label for="Tél">Tél:</label> <input type="tel" class="form-control"
-                 name="Tél" id="Tél"><br><br><br>
-               
-                <label for="Commentaire">Commentaire:</label><input  type="textarea" style="height: 100px;width: 300px; ;"
-                 class="form-control"
-                 name="Commentaire" id="Commentaire"><br><br>
-               </form>
-              
-             </div>
-           </div>
-        
-        
-       <div class="row g-3 align-items-center">
-          <div class="col-auto ">
-             <button type="submit" class="btn btn-sm btn-primary" style="margin-left: 20px;">Envoyer</button><br><br>
-             <p><a href="index.html" class="btn btn-sm btn-primary">Retour à l'Acceuil</a></p><br>
+          <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="email" id="Email" name="email" placeholder="votre@email.com" required>
           </div>
-       </div>
-</div>
-    <script src=boot/js/bootstrap.bundle.min.js></script> 
+          <div class="form-group">
+            <label for="Tel">Téléphone (optionnel)</label>
+            <input type="tel" id="Tel" name="tel" placeholder="+221 XX XXX XX XX">
+          </div>
+          <div class="form-group">
+            <label for="Message">Message</label>
+            <textarea id="Message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary submit-btn">Envoyer le message</button>
+        </form>
+        <div id="form-success" class="form-success" style="display:none;">
+          Merci ! Votre message a bien été envoyé. Nous vous répondrons bientôt.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">&lt;/&gt; Élites Codeurs</div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="css.html">Documentation</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:ElitesCodeurs@gmail.com">ElitesCodeurs@gmail.com</a>
+        <a href="tel:0699473334">06 994 73 34</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 Élites Codeurs &mdash; Tous droits réservés</div>
+  </footer>
+
+  <script src="boot/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function envoyerForm(e) {
+      e.preventDefault();
+      document.querySelector('.contact-form').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
