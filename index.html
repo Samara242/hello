@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apprendre le CSS | Élites Codeurs</title>
+  <link href="boot/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-tag">&lt;/&gt;</span> Élites Codeurs
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Accueil</a></li>
+        <li><a href="css.html">Documentation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="burger" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <ul class="nav-mobile" id="mobileMenu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="css.html">Documentation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-badge">Groupe Élites Codeurs &mdash; Projet CSS</div>
+      <h1>Apprendre le <span>CSS</span><br>comme un Pro</h1>
+      <p>Maîtrisez le CSS de zéro à expert. Des explications claires, des exemples de code à copier, et une progression guidée pour créer de belles pages web.</p>
+      <div class="hero-btns">
+        <a href="css.html" class="btn-primary">Commencer maintenant</a>
+        <a href="contact.html" class="btn-ghost" style="color:white; border-color:rgba(255,255,255,0.35);">Nous contacter</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2 class="section-title">Ce que vous allez apprendre</h2>
+    <p class="section-sous-titre">Du formatage de base aux techniques avancées, tout est expliqué étape par étape.</p>
+    <div class="features-grid" style="max-width:1100px; margin:0 auto;">
+      <div class="feature-card">
+        <div class="feature-num">01 &mdash; Bases</div>
+        <h3>Styliser vos pages</h3>
+        <p>Couleurs, polices, tailles, fonds &mdash; donnez vie à vos pages HTML grâce aux propriétés CSS essentielles.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">02 &mdash; Mise en page</div>
+        <h3>Structurer votre contenu</h3>
+        <p>Apprenez à organiser vos éléments pour que votre page soit lisible et bien structurée.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">03 &mdash; Responsive</div>
+        <h3>Design Adaptatif</h3>
+        <p>Créez des sites qui s'adaptent parfaitement à tous les écrans : téléphone, tablette et ordinateur.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-num">04 &mdash; Pratique</div>
+        <h3>Exemples à copier</h3>
+        <p>Chaque notion est accompagnée d'un exemple de code que vous pouvez copier et modifier immédiatement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="guide">
+    <div class="guide-inner">
+      <div class="guide-text">
+        <h2>Guide de démarrage rapide</h2>
+        <p>Pour commencer à coder, vous aurez besoin d'un éditeur de code. Nous recommandons <strong>Visual Studio Code</strong>, gratuit et simple à prendre en main.</p>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">01</span>
+            <div>
+              <strong>Télécharger VS Code</strong>
+              <p>Rendez-vous sur <a href="https://code.visualstudio.com/download" target="_blank">code.visualstudio.com</a> et téléchargez la version pour votre système.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <div>
+              <strong>Créer un dossier de projet</strong>
+              <p>Exemple&nbsp;: <code>MesDebutsEnCSS/</code> avec les fichiers <code>index.html</code> et <code>style.css</code>.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <div>
+              <strong>Commencer à pratiquer</strong>
+              <p>Consultez notre documentation, copiez les exemples et modifiez-les pour apprendre en faisant.</p>
+            </div>
+          </div>
+        </div>
+        <a href="css.html" class="btn-primary">Voir la documentation</a>
+      </div>
+      <div class="guide-visual">
+        <div class="folder-diagram">
+          <div class="folder-root">MesDebutsEnCSS/</div>
+          <div class="folder-item">├── index.html</div>
+          <div class="folder-item">└── style.css</div>
+        </div>
+        <div style="margin-top:1.5rem; background:#fff; border:1px solid #e2e6ea; border-radius:10px; padding:1.25rem;">
+          <p style="font-size:0.85rem; color:#5a6478; margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em;">Lien utile</p>
+          <a href="https://code.visualstudio.com/download" target="_blank" style="font-size:0.95rem; font-weight:600;">Télécharger Visual Studio Code</a>
+          <p style="font-size:0.85rem; margin-top:0.35rem;">Editeur gratuit, disponible sur Windows, Mac et Linux.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">&lt;/&gt; Élites Codeurs</div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="css.html">Documentation</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:ElitesCodeurs@gmail.com">ElitesCodeurs@gmail.com</a>
+        <a href="tel:0699473334">06 994 73 34</a>
+      </div>
+    </div>
+    <div class="footer-copy">&copy; 2026 Élites Codeurs &mdash; Tous droits réservés</div>
+  </footer>
+
+  <script src="boot/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
+
+
 
