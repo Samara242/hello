@@ -1,238 +1,307 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>introduction au CSS</title>
-    <link href="boot/css/bootsstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction au CSS | Élites Codeurs</title>
+  <link href="boot/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #f5f7fa; }
+  </style>
 </head>
-<body style=" background-image: url(yo.jpg); background-repeat:two-repeat;" class="cours">
-  <div class="container mt-4">
-        <div class="row">
-          <div col-12 cold-md-6>
-           <section>
-             <aside>
-                <h1 id="titre" style="color: #0d6efd; background-color: rgb(87, 18, 78); text-align: center;"> Introduction au CSS</h1>
-                 <p><span style="font-weight:bold ;">CSS</span> est le langage qui nous permet de mettre en forme nos pages web, en stylant nos paragraphes, titres et bien d'autres.Dans ce module nous verrons ensemble comment utiliser le CSS dans nos pages. </p><br>
-                  <h3>Vous devez certainement vous demander par où commencer ?<br></h3>
-                    <p>ET bien c'est très simple, il faut savoir qu'il existe trois manières différrentes d'utiliser CSS: dans le head, le body en l'inserant directement dans les balises html.<br>Mais, ces pratiques peuvent être genantes lorsqu'on a un site qui contient plusieurs pages web;
-                    alors nous utiliserons un fichier <span style="color: aqua;">.css externe</span>  qui reste la meilleur façon d'utiliser CSS? <br></p>
-               <p>Nos pages web sont conçues grâce au langage HTML, pour les rendre plus beau à l'oeil nous utilisons des propriétés du langage CSS. </p><br>
-              </aside>
-             </section>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-tag">&lt;/&gt;</span> Élites Codeurs
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="css.html" class="active">Documentation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="burger" onclick="toggleMenu()">&#9776;</button>
+    </div>
+    <ul class="nav-mobile" id="mobileMenu">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="css.html">Documentation</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- EN-TETE -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="page-label">Documentation CSS</div>
+      <h1>Introduction au CSS</h1>
+      <p>Le langage qui donne vie à vos pages web &mdash; couleurs, typographie, mise en page.</p>
+    </div>
+  </div>
+
+  <!-- LAYOUT DOC -->
+  <div class="doc-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <p class="sidebar-title">Sur cette page</p>
+      <nav>
+        <a href="#intro">Qu'est-ce que le CSS ?</a>
+        <a href="#code-de-base">Code HTML de base</a>
+        <a href="#formatage">Formatage du texte</a>
+        <a href="#taille">&nbsp;&nbsp;&nbsp; Taille</a>
+        <a href="#police">&nbsp;&nbsp;&nbsp; Police</a>
+        <a href="#style-texte">&nbsp;&nbsp;&nbsp; Style du texte</a>
+        <a href="#alignement">Alignement</a>
+        <a href="#couleur">Couleur &amp; Fond</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENU -->
+    <main class="doc-content">
+
+      <!-- QU'EST-CE QUE LE CSS -->
+      <section id="intro" class="doc-section">
+        <h2>Qu'est-ce que le CSS ?</h2>
+        <p><strong>CSS</strong> (Cascading Style Sheets) est le langage qui permet de mettre en forme vos pages web : couleurs, tailles, polices, espacements.</p>
+        <p>Il existe 3 façons d'intégrer du CSS, mais la <strong>meilleure pratique</strong> est d'utiliser un <strong>fichier .css externe</strong> lié à votre HTML, surtout pour les sites multi-pages.</p>
+        <div class="info-box">
+          Un fichier CSS externe permet de modifier le style de toutes vos pages depuis un seul endroit. C'est la méthode recommandée.
+        </div>
+      </section>
+
+      <!-- CODE DE BASE -->
+      <section id="code-de-base" class="doc-section">
+        <h2>Code HTML de base</h2>
+        <p>Voici le code HTML minimal pour commencer à pratiquer. Copiez-le dans votre fichier <code>index.html</code> :</p>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">index.html</span>
+            <button class="copy-btn" onclick="copierCode('c0')">Copier</button>
           </div>
+          <pre id="c0"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Mon premier CSS&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Mon Site&lt;/h1&gt;
+  &lt;p id="intro"&gt;Bonjour à tous, j'apprends le CSS !&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        <p>Vous pouvez aussi <a href="exemples/exemples.html">consulter l'exemple en direct</a>.</p>
+      </section>
+
+      <!-- FORMATAGE -->
+      <section id="formatage" class="doc-section">
+        <h2>Formatage du texte</h2>
+        <p>Formater le texte consiste à modifier son apparence : taille, police, style, alignement.</p>
+
+        <!-- TAILLE -->
+        <h3 id="taille">1. La taille &mdash; <code>font-size</code></h3>
+        <p>On utilise la propriété <code>font-size</code>. La valeur peut être en <code>px</code> (pixels), <code>rem</code>, ou <code>%</code>.</p>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">style.css</span>
+            <button class="copy-btn" onclick="copierCode('c1')">Copier</button>
+          </div>
+          <pre id="c1"><code>p {
+  font-size: 20px;
+}</code></pre>
+        </div>
+        <div class="preview-box">
+          <div class="preview-label">Rendu dans le navigateur</div>
+          <img src="exemples/n1.png" alt="Texte à 20px" style="max-width:100%; height:auto; border-radius:6px;">
         </div>
 
-
-
-        <div class="row">
-          <div col-12 cold-md-6>
-              <h3><span style="font-weight: bold;">le formatage du texte:</span>  formater le texte consiste à modifier son apparence: la taille, la police, lee soulignement, le fond de la page. </h3>
-                 <div class="bg-dark text-light p-3 rounded">
-                    <p>Voici le code html que nous allons utiliser pour ce cours,vous pouviez le copier dans  <strong>le fichier . html</strong> que vous avez créer.</p>
-                     <fieldset> 
-                      <button class="btn btn-primary mb-2" onclick="copiercode('code1')">copier</button>
-    <pre id="code1"><code> 
-      &lt;!DOCTYPE html&gt;
-      &lt;html lang="fr"&gt;
-      &lt;head&gt;
-      &lt;meta charset="UTF-8"&gt;
-      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0&gt;
-      &lt;title&gt;Mon premier CS&lt;title&gt;
-      &lt;link rel="stylesheet" href="style.css"&gt;
-      &lt;head&gt;
-      &lt;body&gt;
-      &lt;h1&gt;Mon Site&lt;h1&gt; 
-      &lt;p id="titre" &gt;bonjour à tous, j'apprends le css.&lt;p&gt;
-      &lt;body&gt;
-      &lt;html&gt;
-    </code></pre>
-                      </fieldset>
-                   </div>
-            </div>
+        <!-- POLICE -->
+        <h3 id="police">2. La police &mdash; <code>font-family</code></h3>
+        <p>On utilise <code>font-family</code>. Il est recommandé d'indiquer <strong>plusieurs polices</strong> pour que le navigateur en choisisse une disponible sur la machine.</p>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">style.css</span>
+            <button class="copy-btn" onclick="copierCode('c2')">Copier</button>
           </div>
+          <pre id="c2"><code>h1 {
+  /* Mettre 3 polices de préférence */
+  font-family: 'Times New Roman', Times, serif;
+}</code></pre>
+        </div>
 
+        <!-- STYLE TEXTE -->
+        <h3 id="style-texte">3. Italique, Gras, Souligné</h3>
 
-          <p>
-            <ol>
-              <div class="row">
-                  <div col-12 cold-md-6>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">Italique — font-style</span>
+            <button class="copy-btn" onclick="copierCode('c3')">Copier</button>
+          </div>
+          <pre id="c3"><code>body {
+  font-style: italic;
+}</code></pre>
+        </div>
+        <div class="preview-box">
+          <div class="preview-label">Rendu</div>
+          <img src="exemples/n2.png" alt="Texte en italic" style="max-width:100%; height:auto; border-radius:6px;">
+        </div>
 
-                    <li>La Taille : on utilise la propriété <strong>font-size: sa valeur en px ou % </strong></li><br>
-                            <fieldset>
-                             <button class="btn btn-primary mb-2" onclick="copiercode('code2')">copier</button>
-   <pre id="code2"><code>
-     p {
-        font-size: 20px;
-        }
-    </code></pre>
-                            </fieldset>
-                        <figure class="figure">
-                          <img src="exemples/n1.png" alt="texte à 20px" class="img-fluid"/>
-                          <figcaption class="figcaption">Taille à 20 px</figcaption></figure><br>
-                  </div>
-              </div>
-                  
-        
-                  <div class="row">
-                   <div col-12 cold-md-6>
-                     <li>la police: on utilise la propriété <strong>font-familly, on met le nom de la police que l'on souhaite, de préfférence en mettre trois ou quatre le navigateur affichera la police qu'on a dans nos fichiers.</strong></li><br>
-                       <fieldset>
-                             <button class="btn btn-primary mb-2" onclick="copiercode('code3')">copier</button>
-    <pre id="code3" ><code>
-      h1 {
-          font-familly: Times NewsRoman, Times, serif;/*mettre trois 
-          police de préférence pour permettre au navigateur 
-          de sélecttionner celle dont le fichier est présent 
-          dans notre machine*/
-         }
-        </code></pre>
-                        </fieldset> 
-                    </div><br>
-                   </div>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">Gras — font-weight</span>
+            <button class="copy-btn" onclick="copierCode('c4')">Copier</button>
+          </div>
+          <pre id="c4"><code>p {
+  font-weight: bold;
+}</code></pre>
+        </div>
 
-                  
-                   <div class="row">
-                      <div col-12 cold-md-6>
-                         <li>Italique, Gras, Souligné</li><br>
-                           <fieldset>
-                               <button class="btn btn-primary mb-2" onclick="copiercode('code4')">copier</button>
-      <pre id="code4"><code>
-      body { 
-            font-style: italic;
-           }
-      </code></pre>
-                           </fieldset>
-      <figure class="figure">
-      <img src="exemples/n2.png" alt="texte en italic">
-      <figcaption class="figcaption"> titre en italic</figcaption></img></figure><br>
-                      </div>
-                   </div>
-                  
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">Souligné / Barré / Surligné — text-decoration</span>
+            <button class="copy-btn" onclick="copierCode('c5')">Copier</button>
+          </div>
+          <pre id="c5"><code>h1 {
+  text-decoration: underline;   /* souligné */
+}
+p {
+  text-decoration: line-through; /* barré */
+}
+span {
+  text-decoration: overline;    /* ligne au-dessus */
+}</code></pre>
+        </div>
+        <div class="preview-box">
+          <div class="preview-label">Rendu</div>
+          <img src="exemples/n60.png" alt="Soulignements" style="max-width:100%; height:auto; border-radius:6px;">
+        </div>
+      </section>
 
-                     <div class="row">
-                      <div col-12 cold-md-6>
-                              <fieldset>
-                                 <button class="btn btn-primary mb-2" onclick="copiercode('code5')">copier</button>
-    <pre id="code5"><code>
-      p { 
-        font-weight: bold;/*en gras*/
-       }
-    </code></pre>
+      <!-- ALIGNEMENT -->
+      <section id="alignement" class="doc-section">
+        <h2>Alignement du texte</h2>
+        <p>La propriété <code>text-align</code> permet de positionner horizontalement votre texte.</p>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">style.css</span>
+            <button class="copy-btn" onclick="copierCode('c6')">Copier</button>
+          </div>
+          <pre id="c6"><code>h1 { text-align: center; }   /* centré */
+h2 { text-align: left; }    /* à gauche (défaut) */
+h3 { text-align: right; }   /* à droite */
+p  { text-align: justify; } /* justifié */</code></pre>
+        </div>
+        <div class="preview-box">
+          <div class="preview-label">Rendu</div>
+          <img src="exemples/n70.png" alt="Alignements texte" style="max-width:100%; height:auto; border-radius:6px;">
+        </div>
+      </section>
 
-                       
-                                  <button class="btn btn-primary mb-2" onclick="copiercode('code6')">copier</button>
-     <pre id="code6"><code>
-      h1 { 
-         text-decoration: underline;/*souligné*/
-        }
-     </code></pre>
-                   
-                        
-                                  <button class="btn btn-primary mb-2" onclick="copiercode('code7')">copier</button>
-       <pre id="code7" ><code>
-      p { 
-        text-decoration: Line-through;/*barré*/
-       }
-     </code></pre>
+      <!-- COULEUR -->
+      <section id="couleur" class="doc-section">
+        <h2>Couleur &amp; Fond</h2>
+        <p>Utilisez <code>color</code> pour la couleur du texte, et <code>background-color</code> ou <code>background-image</code> pour le fond.</p>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="filename">style.css</span>
+            <button class="copy-btn" onclick="copierCode('c7')">Copier</button>
+          </div>
+          <pre id="c7"><code>p {
+  color: purple;       /* nom de couleur */
+}
 
-                        
-                                    <button class="btn btn-primary mb-2" onclick="copiercode('code8')">copier</button>
-      <pre id="code8"><code>
-      p { 
-        text-decoration: overline;/*souligné 
-        le haut*/
-        }
-      </code></pre>
-                             </fieldset>
-                          <figure><img src="exemples/n60.png" alt="soulignement"><figcaption>titre souligné</figcaption></img></figure><br>
-                       </div>
-                      </div>
-             </ol>
-           </p>
-            
+h1 {
+  color: #FFC305;      /* notation hexadécimale */
+}
 
-                    <div class="row">
-                     <div col-12 cold-md-6>
-                         <h3><span style="font-weight: bold;"> Alignement de texte</span></h3><br>
-                            <fieldset>
-                                    <button class="btn btn-primary mb-2" onclick="copiercode('code9')">copier</button>
-      <pre id="code9"><code>
-        h1 { 
-           text-align: center;
-          }
-     </code></pre>
+p {
+  background-color: blue; /* fond coloré */
+}
 
-                                     <button class="btn btn-primary mb-2" onclick="copiercode('code10')">copier</button>
-      <pre id="code10"><code>
-        body { 
-             text-align: right;
-            }
-     </code></pre>
+body {
+  background-image: url("fond.png");
+  background-repeat: no-repeat; /* pas de répétition */
+  background-size: cover;       /* couvre tout l'écran */
+}</code></pre>
+        </div>
 
-                                    <button class="btn btn-primary mb-2" onclick="copiercode('code11')">copier</button>
-       <pre id="code11"><code>
-        h1 { 
-           text-align: left;
-           }
-       </code></pre>
+        <p>Voici des exemples de rendu :</p>
 
-                                      <button class="btn btn-primary mb-2" onclick="copiercode('code12')">copier</button>
-       <pre id="code12"><code>
-        h1 { 
-           text-align: justify;
-          }
-       </code></pre>
-                           </fieldset><br>
-                         <figure><img src="exemples/n70.png" alt="ecrit à droite"><figcaption>texte à droite</figcaption></img></figure><br>
-                      </div>
-                     </div>
+        <div class="preview-box">
+          <div class="preview-label">Fond en image</div>
+          <img src="exemples/n30.png" alt="Image en fond" style="max-width:100%; height:auto; border-radius:6px;">
+        </div>
+        <div class="preview-box">
+          <div class="preview-label">Fond en couleur</div>
+          <img src="exemples/n40.png" alt="Fond en couleur" style="max-width:100%; height:auto; border-radius:6px;">
+        </div>
+        <div class="preview-box">
+          <div class="preview-label">Texte en couleur</div>
+          <img src="exemples/n50.png" alt="Texte en couleur" style="max-width:100%; height:auto; border-radius:6px;">
+        </div>
 
+        <div class="color-grid" style="margin-top:1.5rem;">
+          <div class="color-chip" style="background:#7c3aed; color:white;">#7c3aed</div>
+          <div class="color-chip" style="background:#059669; color:white;">#059669</div>
+          <div class="color-chip" style="background:#dc2626; color:white;">#dc2626</div>
+          <div class="color-chip" style="background:#FFC305; color:#333;">#FFC305</div>
+        </div>
 
-                  <div class="row">
-                   <div col-12 cold-md-6>
-                    <h3><span style="font-weight: bold;">La couleur :</span></h3> on utilise la propriété <strong>color, pour le texte uniquement et
-                     background-color, pour le fond en couleur et aussi background-image, pour un fond en image</strong></li><br>
-                           <fieldset>
-                                 <button class="btn btn-primary mb-2" onclick="copiercode('code13')">copier</button>
-     <pre id="code13"><code>
-      p { 
-         color:purple;
-        }
+        <div class="nav-btns">
+          <a href="index.html" class="btn-ghost">Retour à l'accueil</a>
+          <a href="contact.html" class="btn-primary">Nous contacter</a>
+          <a href="exemples/exemples.html" class="btn-ghost">Voir l'exemple complet</a>
+        </div>
+      </section>
 
-      h1{
-         color: #FFC305;/*la couleur peut
-          s'écrire en hexadécimal*/
-        }
+    </main>
+  </div>
 
-      p {
-         background: blue;
-        }
-
-      body{
-           background-image: url("exemples/n30.png");
-           background-repeat: no-repeat;/*évite que l'image
-            se répète plusieurs fois*/
-          }
-      </code></pre>                               
-                           </fieldset><br>
-                          <figure><img src="exemples/n30.png" alt="image en fond"><figcaption>image utilisé comme fond</figcaption></img></figure>
-                          <figure><img src="exemples/n40.png" alt="fond en couleur"><figcaption> fond de texte en couleur</figcaption></img></figure>
-                          <figure><img src="exemples/n50.png" alt="texte en couleur"><figcaption>titre en couleur</figcaption></img></figure>
-                        <p><a href="index.html" class="btn btn-sm btn-primary">Retour à l'Acceuil</a></p>
-                        <div class="text-center mt-5"><a href="exemples/exemples.html" class=" btn btn-success btn-sm">Téléchager cet exemple</a></div>
-                   </div>
-                  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">&lt;/&gt; Élites Codeurs</div>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="css.html">Documentation</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:ElitesCodeurs@gmail.com">ElitesCodeurs@gmail.com</a>
+        <a href="tel:0699473334">06 994 73 34</a>
+      </div>
     </div>
-    <script src=boot/js/bootstrap.bundle.min.js></script>
-    <script>
-     function copiercode(id){
-     let texte = document.getElementById(id).innerText;
-     navigator.clipboard.writeText(texte);
-     alert("code copié");
-     }
-    </script>
+    <div class="footer-copy">&copy; 2026 Élites Codeurs &mdash; Tous droits réservés</div>
+  </footer>
 
+  <script src="boot/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function copierCode(id) {
+      const el = document.getElementById(id);
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        const btn = document.querySelector(`[onclick="copierCode('${id}')"]`);
+        if (btn) { btn.textContent = 'Copié !'; setTimeout(() => btn.textContent = 'Copier', 2000); }
+      });
+    }
+    // Surligne le lien actif dans la sidebar
+    const links = document.querySelectorAll('.sidebar a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      document.querySelectorAll('[id]').forEach(s => {
+        if (window.scrollY >= s.offsetTop - 130) current = s.id;
+      });
+      links.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
 </body>
 </html>
